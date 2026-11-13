@@ -192,7 +192,7 @@ config t
       password pass
       login
       exec-timeout 0 0
-   Int Gi 0/0/0
+   Int fa 0/0
      description CME
      ip add 10.42.100.8 255.255.255.0
 	 no shutdown
@@ -245,12 +245,12 @@ ephone-dn 8
 ephone-dn 10
  number 4298
 Ephone 1
-  Mac-address cafe.face.baba
+  Mac-address 204c.9e6c.8743
   type 8945
   button 1:8 2:7 3:6 4:5
   restart
 Ephone 2
-  Mac-address fafa.caca.baba
+  Mac-address ccd8.c1fb.0f11
   type 8945
   button 1:4 2:3 3:2 4:1
   restart  
@@ -283,10 +283,10 @@ conf t
   destination-pattern 11..
   session target ipv4:10.11.100.8
   codec g711ULAW
- !dial-peer voice 12 Voip
-  !destination-pattern 12..
-  !session target ipv4:10.12.100.8
-  !codec g711ULAW
+ dial-peer voice 12 Voip
+  destination-pattern 12..
+  session target ipv4:10.12.100.8
+  codec g711ULAW
  dial-peer voice 21 Voip
   destination-pattern 21..
   session target ipv4:10.21.100.8
@@ -307,10 +307,10 @@ conf t
   destination-pattern 41..
   session target ipv4:10.41.100.8
   codec g711ULAW
- dial-peer voice 42 Voip
-  destination-pattern 42..
-  session target ipv4:10.42.100.8
-  codec g711ULAW
+ !dial-peer voice 42 Voip
+  !destination-pattern 42..
+  !session target ipv4:10.42.100.8
+  !codec g711ULAW
  dial-peer voice 51 Voip
   destination-pattern 51..
   session target ipv4:10.51.100.8
